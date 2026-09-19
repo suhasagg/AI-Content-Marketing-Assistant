@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata: {name: contentalchemy}
+spec:
+  replicas: 3
+  selector: {matchLabels: {app: contentalchemy}}
+  template:
+    metadata: {labels: {app: contentalchemy}}
+    spec:
+      containers:
+      - name: api
+        image: contentalchemy:latest
+        ports: [{containerPort: 8080}]
+        resources:
+          requests: {cpu: "250m", memory: "256Mi"}
+          limits: {cpu: "2", memory: "1Gi"}
+        readinessProbe: {httpGet: {path: /health, port: 8080}, initialDelaySeconds: 3, periodSeconds: 10}
+---
+apiVersion: v1
+kind: Service
+metadata: {name: contentalchemy}
+spec:
+  selector: {app: contentalchemy}
+  ports: [{port: 80, targetPort: 8080}]

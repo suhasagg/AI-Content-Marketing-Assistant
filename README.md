@@ -1,6 +1,6 @@
 # ContentAlchemy — AI Content Marketing Assistant
 
-> Principal+ reference implementation for multi-agent, research-grounded, multi-channel content production.
+> Implementation for multi-agent, research-grounded, multi-channel content production.
 
 ## 1. Executive summary
 ContentAlchemy converts a campaign brief into research-aware blogs, LinkedIn/X posts, newsletters and visual briefs through a bounded multi-agent workflow. The reference code runs locally without paid APIs through a mock provider and exposes an OpenAI-compatible provider adapter for real deployments.
@@ -229,8 +229,6 @@ A Staff/Principal engineer should also challenge the premise: multi-agent archit
 - cost ledger and quota scheduler
 - multilingual/localization QA
 
-## 27. Resume framing
+## 27. Portfolio
 **ContentAlchemy — Multi-Agent Generative AI Content Platform:** Designed a production-oriented, multi-agent content system with research-grounded RAG, brand/SEO policy gates, multi-channel generation, independent evaluation, provider abstraction, observability and Kubernetes deployment. Architecture emphasizes provenance, prompt-injection resistance, tenant isolation, bounded agent workflows, quality regression testing and token-aware cost/capacity controls.
 
-## 28. Disclaimer
-This is a reference architecture and runnable engineering starter, not a turnkey marketing/publishing service. Production deployment requires organization-specific authentication, privacy, copyright, platform/API, brand, security and compliance review.
